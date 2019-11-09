@@ -39,6 +39,35 @@ body {
   outline: none;
 }
 
+.form {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 500px;
+  height: 350px;
+}
+
+.form_id, .form_name, .form_cost, .form_quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 15px 0px;
+}
+
+.form_button {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .header {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#fffffa), color-stop(#e9e9e5), color-stop(#d3d3d0), color-stop(#bdbdbb), color-stop(#a7a7a6), color-stop(#919191), color-stop(#7b7a7d), color-stop(#656468), color-stop(#4f4e53), color-stop(#39383e), color-stop(#232229), to(#0d0c14));
   background-image: linear-gradient(to bottom, #fffffa, #e9e9e5, #d3d3d0, #bdbdbb, #a7a7a6, #919191, #7b7a7d, #656468, #4f4e53, #39383e, #232229, #0d0c14);
@@ -86,6 +115,32 @@ main .wrapper .content {
   -ms-flex-preferred-size: 70%;
       flex-basis: 70%;
   border: 2px solid black;
+}
+
+main .wrapper .content a {
+  text-decoration: none;
+}
+
+main .wrapper .content a:hover {
+  color: red;
+}
+
+main .wrapper .content__table tbody tr {
+  position: relative;
+}
+
+main .wrapper .content__table tbody tr td {
+  height: 49px;
+}
+
+main .wrapper .content__table tbody tr .delete {
+  background-image: url("./images/delete.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 49px;
+  width: 49px;
+  left: 60%;
 }
 
 main .wrapper .navigation {

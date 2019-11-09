@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
     <!-- Подключаем собственные стили -->
     <link rel="stylesheet" href="./style.css">
+    
     <!-- Подключаем Bootstrap 4 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
+    <!-- Подключаем библиотеку FansyBox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
     <title>Interactive table</title>
 </head>
 
@@ -41,34 +46,23 @@
                     <table class="table content__table">
                         <thead>
                             <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Имя </th>
-                            <th scope="col">Фамилия</th>
-                            <th scope="col">Username</th>
+                                <th scope="col">Идентификатор</th>
+                                <th scope="col">Название</th>
+                                <th scope="col">Стоимость</th>
+                                <th scope="col">Количество</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                                <td>1</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
                             </tr>
-                            <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            </tr>
-                            <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            </tr>
+                            
                         </tbody>
                         </table>
-                    <button class="button buton-add">Добавить</button>    
+                    <a href="#form" class="button button-add call-form">Добавить</a>    
                 </div>
                 <aside class="navigation">
                     <ul>
@@ -83,7 +77,32 @@
                         </li>
                     </ul>
                 </aside>
-            </div>
+            </div>  
+            <form class="form" id="form" action="">
+
+                <div class="form_id">
+                    <label for="id" class="form_label-id">Идентификатор</label>
+                    <input type="text" id="id" name="id" class="form_input-id input">
+                </div>
+
+                <div class="form_name">
+                    <label for="name" class="form_label-name">Название</label>
+                    <input type="text" id="name" name="name" class="form_input-cost input">
+                </div>
+                
+                <div class="form_cost">
+                    <label for="cost" class="form_label-cost">Цена</label>
+                    <input type="text" id="cost" name="cost" class="form_input-cost input">
+                </div>
+                
+                <div class="form_quantity">
+                    <label for="quantity" class="form_label-quantity">Количество</label>
+                    <input type="text" id="quantity" name="quantity" class="form-input-quantity input">
+                </div>
+                
+                <input type="submit" value="Add info" class="form_button button">
+
+            </form>
         </section>
     </main>
     <footer class="footer">
@@ -92,6 +111,16 @@
             <div class="designby">Designed by <a href="https://github.com/Lekvi/ICL" target="_blank">Lekvik</a></div>
         </div>
     </footer>
+
+    <!-- Подключаем бибилиотеку Jquery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+    <!-- Подклюаем собсветнные скрипты -->
+    <script src="./main.js"></script>
+
+    <!-- Подключаем библиотеку FansyBox -->
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
 </body>
 
 </html>
