@@ -5,54 +5,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Подключаем собственные стили -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Подключаем Bootstrap 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
     <title>Interactive table</title>
 </head>
 
 <body>
     <header class="header">
-        <div class="container">
-            <img src="" alt="" class="header__logo">
+        <div class="wrapper">
+            <img src="./images/logo.png" alt="Logo" class="header__logo">
             <div class="header__socials">
-                <img src="" alt="">
-                <img src="" alt="">
+                <a href="https://www.instagram.com/itis_kfu/?hl=ru" target="_blank"  class="header__socials-link"><img src="./images/instagram.png" alt="instagram"></a>
+                <a href="https://vk.com/itis_kpfu" target="_blank" class="header__socials-link"><img src="./images/vkontakte.png" alt="vkontakte"></a>
             </div>
         </div>
     </header>
     <main class="main">
         <section>
-            <div class="container">
+            <div class="wrapper">
                 <div class="content">
                     <p class="content__descritpion">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                         Consectetur incidunt eaque est iusto et, odio harum impedit dolorum inventore omnis
                         corrupti a doloremque sapiente optio necessitatibus recusandae facilis id asperiores.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Consectetur incidunt eaque est iusto et, odio harum impedit dolorum inventore omnis
+                        corrupti a doloremque sapiente optio necessitatibus recusandae facilis id asperiores.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Consectetur incidunt eaque est iusto et, odio harum impedit dolorum inventore omnis
+                        corrupti a doloremque sapiente optio necessitatibus recusandae facilis id asperiores.
                     </p>
-                    <table class="content__table">
-
-                    </table>
+                    <table class="table content__table">
+                        <thead>
+                            <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Имя </th>
+                            <th scope="col">Фамилия</th>
+                            <th scope="col">Username</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    <button class="button buton-add">Добавить</button>    
                 </div>
-                <aside class="content__navigation">
+                <aside class="navigation">
                     <ul>
-                        <li class="content__navigation-item">
-                            <a href="#" class="content__navigation-link">Пункт 1</a>
+                        <li class="navigation-item">
+                            <a href="#" class="navigation-link">Пункт 1</a>
                         </li>
-                        <li class="content__navigation-item">
-                            <a href="#" class="content__navigation-link">Пункт 2</a>
+                        <li class="navigation-item">
+                            <a href="#" class="navigation-link">Пункт 2</a>
                         </li>
-                        <li class="content__navigation-item">
-                            <a href="#" class="content__navigation-link">Пункт 3</a>
+                        <li class="navigation-item">
+                            <a href="#" class="navigation-link">Пункт 3</a>
                         </li>
                     </ul>
                 </aside>
             </div>
         </section>
     </main>
-    <foooter class="footer">
-        <div class="container">
-            <div class="copyright">All rights reserved</div>
-            <div class="designby">Designed by <a href="">Lekvik</a></div>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="copyright">All rights reserved ©</div>
+            <div class="designby">Designed by <a href="https://github.com/Lekvi/ICL" target="_blank">Lekvik</a></div>
         </div>
-    </foooter>
+    </footer>
 </body>
 
 </html>
