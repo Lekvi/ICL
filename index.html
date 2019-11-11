@@ -5,15 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
     <!-- Подключаем собственные стили -->
-    <link rel="stylesheet" href="./style.css">
-    
+    <link rel="stylesheet" href="./styles/style.css">
+
     <!-- Подключаем Bootstrap 4 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <!-- Подключаем библиотеку FansyBox -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
+    <!-- Подключаем Font-awesome -->
+    <script src="https://kit.fontawesome.com/b80c98bf07.js" crossorigin="anonymous"></script>
 
     <title>Interactive table</title>
 </head>
@@ -23,8 +27,12 @@
         <div class="wrapper">
             <img src="./images/logo.png" alt="Logo" class="header__logo">
             <div class="header__socials">
-                <a href="https://www.instagram.com/itis_kfu/?hl=ru" target="_blank"  class="header__socials-link"><img src="./images/instagram.png" alt="instagram"></a>
-                <a href="https://vk.com/itis_kpfu" target="_blank" class="header__socials-link"><img src="./images/vkontakte.png" alt="vkontakte"></a>
+                <a href="https://www.instagram.com/itis_kfu/?hl=ru" target="_blank" class="header__socials-link">
+                    <span class="instagram-link"><i class="fab fa-instagram"></i></span>
+                </a>
+                <a href="https://vk.com/itis_kpfu" target="_blank" class="header__socials-link">
+                    <span class="vk-link"><i class="fab fa-vk"></i></span>
+                </a>
             </div>
         </div>
     </header>
@@ -44,25 +52,20 @@
                         corrupti a doloremque sapiente optio necessitatibus recusandae facilis id asperiores.
                     </p>
                     <table class="table content__table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Идентификатор</th>
-                                <th scope="col">Название</th>
-                                <th scope="col">Стоимость</th>
-                                <th scope="col">Количество</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            
-                        </tbody>
-                        </table>
-                    <a href="#form" class="button button-add call-form">Добавить</a>    
+                        <tr>
+                            <th scope="col">Идентификатор</th>
+                            <th scope="col">Название</th>
+                            <th scope="col">Стоимость</th>
+                            <th scope="col">Количество</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                    </table>
+                    <a href="#form" class="button button-add call-form">Добавить</a>
                 </div>
                 <aside class="navigation">
                     <ul>
@@ -77,7 +80,7 @@
                         </li>
                     </ul>
                 </aside>
-            </div>  
+            </div>
             <form class="form" id="form" action="">
 
                 <div class="form_id">
@@ -89,17 +92,17 @@
                     <label for="name" class="form_label-name">Название</label>
                     <input type="text" id="name" name="name" class="form_input-cost input">
                 </div>
-                
+
                 <div class="form_cost">
                     <label for="cost" class="form_label-cost">Цена</label>
                     <input type="text" id="cost" name="cost" class="form_input-cost input">
                 </div>
-                
+
                 <div class="form_quantity">
                     <label for="quantity" class="form_label-quantity">Количество</label>
                     <input type="text" id="quantity" name="quantity" class="form-input-quantity input">
                 </div>
-                
+
                 <input type="submit" value="Add info" class="form_button button">
 
             </form>
@@ -116,7 +119,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
 
     <!-- Подклюаем собсветнные скрипты -->
-    <script src="./main.js"></script>
+    <script src="./scripts/main.js"></script>
 
     <!-- Подключаем библиотеку FansyBox -->
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
