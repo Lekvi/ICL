@@ -2,13 +2,17 @@ $(document).ready(function () {
     $('.call-form').fancybox();
 })
 
+function sortTable(){
+    
+}
+
 let data = [
     ['Идентификатор', 'Название', 'Стоимость', 'Количество'],
     [1, 'iPhone 5', '400', 5],
-    [2, 'XBOX', '500', 7]
+
 ]
 
-console.log(data);
+// console.log(data);
 
 // Закрытие модального окна после отправки даных формы
 function closeModal() {
@@ -17,6 +21,25 @@ function closeModal() {
 // Очистка данных формы
 function clearFields() {
     $('.form').find("input[type=text], textarea").val("")
+}
+// Сбор данных и полей формы и организация их в массив вида name=value
+function addInfo() {
+    let Inputdata = $('.form').serializeArray();
+    test = []
+    $(Inputdata).each(function (i, field) {
+        test[i] = field.value;
+        if (isNaN(field.value)) {
+            test[i] = (field.value).toString()
+        } else {
+            test[i] = +field.value
+        }
+    });
+    data.push(test); //  Дополняем исходный массив новыми данными
+    console.log(data)
+}
+// Удаление элемента из массива
+function deleteInfo(){
+    data.splice(rowIndex, 1);
 }
 
 $('.form').submit(function (e) {
@@ -32,33 +55,14 @@ $('.form').submit(function (e) {
 
     // Удаление ближайшего ряда в таблице и в переменной по клику на иконку
     $('.delete').click(function () {
-        rowIndex = ($(this).closest('tr').index()+1);
+        rowIndex = ($(this).closest('tr').index());
         $(this).closest('tr').remove();
-        data.splice(rowIndex, 1);
-        console.log(data);
+        deleteInfo()
+        console.log(data)
     })
 
-    // Сбор данных и полей формы и организация их в массив вида name=value
-    let Inputdata = $('.form').serializeArray();
-    test = []
-    $(Inputdata).each(function (i, field) {
-        test[i] = field.value;
-        // if(Number.isInteger(field.value)){
-        //     test[i] = (field.value).toString()
-        // } else {
-        //     test[i] = +field.value
-        // }
-
-    });
-
-    // console.log(test) // Вывод форматированного массива данных из формы
-
-    data.push(test); //  Дополняем исходный массив новыми данными
-
-    console.log(data)
-
+    addInfo()
     setTimeout(closeModal, 200)
     clearFields()
-    
-});
 
+});

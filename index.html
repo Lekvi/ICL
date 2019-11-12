@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    
     <!-- Подключаем собственные стили -->
     <link rel="stylesheet" href="./styles/style.css">
-
+    
     <!-- Подключаем Bootstrap 4 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
     <!-- Подключаем библиотеку FansyBox -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 
@@ -27,7 +26,7 @@
         <div class="wrapper">
             <img src="./images/logo.png" alt="Logo" class="header__logo">
             <div class="header__socials">
-                <a href="https://www.instagram.com/itis_kfu/?hl=ru" target="_blank" class="header__socials-link">
+                <a href="https://www.instagram.com/itis_kfu/?hl=ru" target="_blank"  class="header__socials-link">
                     <span class="instagram-link"><i class="fab fa-instagram"></i></span>
                 </a>
                 <a href="https://vk.com/itis_kpfu" target="_blank" class="header__socials-link">
@@ -40,7 +39,7 @@
         <section>
             <div class="wrapper">
                 <div class="content">
-                    <p class="content__descritpion">
+                    <p class="content__descritpion ">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                         Consectetur incidunt eaque est iusto et, odio harum impedit dolorum inventore omnis
                         corrupti a doloremque sapiente optio necessitatibus recusandae facilis id asperiores.
@@ -52,20 +51,24 @@
                         corrupti a doloremque sapiente optio necessitatibus recusandae facilis id asperiores.
                     </p>
                     <table class="table content__table">
-                        <tr>
-                            <th scope="col">Идентификатор</th>
-                            <th scope="col">Название</th>
-                            <th scope="col">Стоимость</th>
-                            <th scope="col">Количество</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                    </table>
-                    <a href="#form" class="button button-add call-form">Добавить</a>
+                        <thead>
+                            <tr>
+                                <th scope="col">Идентификатор</th>
+                                <th scope="col">Название</th>
+                                <th scope="col">Стоимость</th>
+                                <th scope="col">Количество</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>iPhone 5</td>
+                                <td>400</td>
+                                <td>5</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    <a href="#form" class="button button-add call-form">Добавить</a>    
                 </div>
                 <aside class="navigation">
                     <ul>
@@ -80,7 +83,7 @@
                         </li>
                     </ul>
                 </aside>
-            </div>
+            </div>  
             <form class="form" id="form" action="">
 
                 <div class="form_id">
@@ -92,17 +95,17 @@
                     <label for="name" class="form_label-name">Название</label>
                     <input type="text" id="name" name="name" class="form_input-cost input">
                 </div>
-
+                
                 <div class="form_cost">
                     <label for="cost" class="form_label-cost">Цена</label>
                     <input type="text" id="cost" name="cost" class="form_input-cost input">
                 </div>
-
+                
                 <div class="form_quantity">
                     <label for="quantity" class="form_label-quantity">Количество</label>
                     <input type="text" id="quantity" name="quantity" class="form-input-quantity input">
                 </div>
-
+                
                 <input type="submit" value="Add info" class="form_button button">
 
             </form>
