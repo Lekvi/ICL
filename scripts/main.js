@@ -11,8 +11,14 @@ let data = [
     [1, 'iPhone 5', '400', 5],
 
 ]
+// Сортировка таблицы ( рабтает не совсем корректно)
+$('.content__table').click(function(){
+    let sortedRows = Array.from(table.rows)
+    .slice(1)
+    .sort((rowA, rowB) => rowA.cells[0].innerHTML > rowB.cells[0].innerHTML ? 1 : -1);
 
-// console.log(data);
+    table.tBodies[0].append(...sortedRows);
+})
 
 // Закрытие модального окна после отправки даных формы
 function closeModal() {
